@@ -21,4 +21,11 @@ babynames %>%
   filter(name == "Sky", year >= 2000)
 ```
 
+This is a graph showing the number of babies called Sky in each year.
 
+```{r}
+babynames %>% 
+  filter(name == "Sky", year >= 2000) %>%
+  ggplot(aes(x = year, y = n)) +
+  geom_line()
+```
